@@ -14,15 +14,7 @@ class TasksScreen extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: () {
           showModalBottomSheet(
-              context: context,
-              builder: (context) => AddTaskScreen(
-                    (newTaskTitle) {
-                      /*    setState(() {
-                        tasks.add(Task(name: newTaskTitle));
-                      });*/
-                      Navigator.pop(context);
-                    },
-                  ));
+              context: context, builder: (context) => AddTaskScreen());
         },
       ),
       backgroundColor: Colors.lightBlueAccent,
@@ -52,7 +44,7 @@ class TasksScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  'Todoey',
+                  'TodoList',
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.w700,
